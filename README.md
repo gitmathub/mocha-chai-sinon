@@ -64,4 +64,7 @@ Citation from https://sinonjs.org/releases/v9.2.0/stubs/
 
 
 # Learning Resources
-- [Using Stubs for Testing in JavaScript with Sinon.js](https://stackabuse.com/using-stubs-for-testing-in-javascript-with-sinon-js/)
+
+- [Stubs with Sinon.js](https://stackabuse.com/using-stubs-for-testing-in-javascript-with-sinon-js/)
+- [Spy with Sinon.js](https://stackabuse.com/using-spies-for-testing-in-javascript-with-sinon/)
+- [Mock with Sinon.js](https://stackabuse.com/using-mocks-for-testing-in-javascript-with-sinon-js/)
