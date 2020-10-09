@@ -2,7 +2,7 @@
 const expect = require('chai').expect;
 const request = require('request');
 const sinon = require('sinon');
-const getPhotosByAlbumId = require('./index');
+const getPhotosByAlbumId = require('./photos');
 
 describe('with Stub: getPhotosByAlbumId', () => {
     before(() => {

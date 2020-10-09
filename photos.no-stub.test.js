@@ -1,5 +1,5 @@
 const expect = require('chai').expect;
-const getPhotosByAlbumId = require('./index');
+const getPhotosByAlbumId = require('./photos');
 
 describe('withoutStub: getPhotosByAlbumId', () => {
     it('should getPhotosByAlbumId', (done) => {
