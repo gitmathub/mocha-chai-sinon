@@ -5,7 +5,7 @@
 - [Installation](#installation)
 - [Mocha - Test Runner](#mocha---test-runner)
 - [Chai - Assertion](#chai---assertion)
-- [Sinon](#sinon)
+- [Sinon - Stub](#sinon---stub)
 - [Learning Resources](#learning-resources)
 
 
@@ -50,7 +50,18 @@ Example:
 expect(foo).to.be.a('string');
 ```
 
-# Sinon
+# Sinon - Stub
+
+Citation from https://sinonjs.org/releases/v9.2.0/stubs/
+> `var stub = sinon.stub(object, "method")`
+> 
+> Replaces object.method with a stub function. An exception is
+> thrown if the property is not already a function.
+> 
+> The original function can be restored by calling
+> 
+> `object.method.restore()`.
+
 
 # Learning Resources
 - [Using Stubs for Testing in JavaScript with Sinon.js](https://stackabuse.com/using-stubs-for-testing-in-javascript-with-sinon-js/)
