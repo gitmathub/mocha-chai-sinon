@@ -3,7 +3,8 @@ const request = require('request')
 const sinon = require('sinon')
 const getAlbumById = require('./photos')
 
-describe('getPhotosByAlbumId', () => {
+// this guy goes online
+describe('Photos is tested with SPY', () => {
   let requestSpy
   before(() => {
     requestSpy = sinon.spy(request, 'get')

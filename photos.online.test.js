@@ -1,8 +1,8 @@
 const expect = require('chai').expect;
 const getPhotosByAlbumId = require('./photos');
 
-describe('withoutStub: getPhotosByAlbumId', () => {
-    it('should getPhotosByAlbumId', (done) => {
+describe('Photos is tested with ONLINE access', () => {
+    it('returns the expected properties', (done) => {
         getPhotosByAlbumId(1).then((photos) => {
             expect(photos.length).to.equal(3);
             photos.forEach(photo => {

@@ -1,15 +1,43 @@
 # Testing with Mocha, Chai and Sinon
 
 - [Testing with Mocha, Chai and Sinon](#testing-with-mocha-chai-and-sinon)
+- [Testing Types](#testing-types)
+  - [Function Testing](#function-testing)
+  - [Testing with a stub](#testing-with-a-stub)
+  - [Testing with a spy](#testing-with-a-spy)
+  - [Testing wiht mock](#testing-wiht-mock)
 - [About the Libraries](#about-the-libraries)
 - [Installation](#installation)
 - [Mocha - Test Runner](#mocha---test-runner)
 - [Chai - Assertion](#chai---assertion)
-- [Sinon - Stub](#sinon---stub)
+- [Sinon - Stub, Spy, Mock](#sinon---stub-spy-mock)
 - [Learning Resources](#learning-resources)
 
 
 This is a learning resource for learning about the JavaScript test libraries: **Mocha**, **Chai** and **Sinon**. It's going to be quite basic and starting from scratch. 
+
+# Testing Types
+
+## Function Testing
+
+Units tests are usualy testing the input and output of functions/ methods.
+
+## Testing with a stub
+
+When testing a function is not wanted or possible because it uses a not available database or internet connection or external service, then you can **stub** the function. The function is *"somehow overridden"* by a custom function that mimics the function by returning the expected result.
+  
+## Testing with a spy
+
+Testing with a spy is quite similar to stub testing: the function in question is wrapped/ overridden. But the focus is different. It's not about testing the return value but the behavior and side effects of the function. For example: Does the function call another function, and if so, how often. This information might be important to deduct if the function works correctly.
+
+## Testing wiht mock
+
+It's like combining stub with spy.
+
+Example: a function fetches some data from online
+- stub: prevent going online, return expected data when the function is called
+- spy: report if the fetch has been called with which parameters
+- mock: stub + spy
 
 # About the Libraries
 
@@ -40,6 +68,12 @@ describe('Result', () => {
 
 ```
 
+For running a test by name, you can use the `grep` option. For example if the description of the test contains the String "MOCK", then the command looks like this:
+
+```bash
+npm run test -- -g MOCK
+```
+
 
 # Chai - Assertion
 
@@ -50,17 +84,9 @@ Example:
 expect(foo).to.be.a('string');
 ```
 
-# Sinon - Stub
+# Sinon - Stub, Spy, Mock
 
-Citation from https://sinonjs.org/releases/v9.2.0/stubs/
-> `var stub = sinon.stub(object, "method")`
-> 
-> Replaces object.method with a stub function. An exception is
-> thrown if the property is not already a function.
-> 
-> The original function can be restored by calling
-> 
-> `object.method.restore()`.
+see the *.test.js files for the example implementations.
 
 
 # Learning Resources

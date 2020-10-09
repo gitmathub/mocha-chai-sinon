@@ -4,7 +4,7 @@ const request = require('request');
 const sinon = require('sinon');
 const getPhotosByAlbumId = require('./photos');
 
-describe('with Stub: getPhotosByAlbumId', () => {
+describe('Photos is tested with STUB', () => {
     before(() => {
         sinon.stub(request, 'get')
             .yields(null, null, JSON.stringify([
@@ -36,7 +36,7 @@ describe('with Stub: getPhotosByAlbumId', () => {
         request.get.restore();
     });
 
-    it('should getPhotosByAlbumId', (done) => {
+    it('returns the expected properties', (done) => {
         getPhotosByAlbumId(1).then((photos) => {
             expect(photos.length).to.equal(3);
             photos.forEach(photo => {

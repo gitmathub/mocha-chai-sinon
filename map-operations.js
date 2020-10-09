@@ -6,8 +6,8 @@ const map = (array, operation) => {
   return arrayOfMappedItems;
 };
 
-console.log(map([
-  { name: 'john', role: 'author' }, 
-  { name: 'jane', role: 'owner' }], user => user.name));
+// console.log(map([
+//   { name: 'john', role: 'author' }, 
+//   { name: 'jane', role: 'owner' }], user => user.name));
 
 module.exports = { map };
