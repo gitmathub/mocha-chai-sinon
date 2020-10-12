@@ -1,5 +1,4 @@
 const expect = require('chai').expect
-const { afterEach } = require('mocha')
 const request = require('request')
 const sinon = require('sinon')
 const getAlbumById = require('./photos')

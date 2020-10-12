@@ -11,6 +11,7 @@
 - [Mocha - Test Runner](#mocha---test-runner)
 - [Chai - Assertion](#chai---assertion)
 - [Sinon - Stub, Spy, Mock](#sinon---stub-spy-mock)
+- [Testing an API - Service - Repository Stack](#testing-an-api---service---repository-stack)
 - [Learning Resources](#learning-resources)
 
 
@@ -88,6 +89,39 @@ expect(foo).to.be.a('string');
 
 see the *.test.js files for the example implementations.
 
+# Testing an API - Service - Repository Stack
+
+Considerations about testing a stack like this:
+
+`-> router -> service -> repository -> database`
+
+- router
+  - request sent -> expected result
+  - why? asure the api contract is met
+
+- service
+  - service method call -> response
+  - why? specified busines logic is met
+  - assumes busines logic rules
+  - parameter validations?
+
+- repository
+  - repository method call -> data result
+  - why?
+    - assure the query correctly implemented
+    - assure the pagination works (batch query)
+    - check the required parameters
+    - assure result is in the expected format
+  - assumes real database in order to get errors on a wrong query
+  - assumes real database to test parameter
+  - assumes real database to check the result comes in expected format
+
+- does it make sense to mock the database?
+  - at build time we don't want a connection to the database
+
+
+- resources
+  - API testing: https://www.sisense.com/blog/rest-api-testing-strategy-what-exactly-should-you-test/
 
 # Learning Resources
 
